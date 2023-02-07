@@ -1,0 +1,64 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.wrapper {
+			width: 60%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.input {
+			font-size: 20pt;
+			clear: both;
+			text-align: right;
+			padding: 10px;
+		}
+		.input input { font-size: 16pt; text-align: center; width: 50% }
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<svg width="220" height="220">
+			<g>
+				<polygon points="110,10 10,190 210,190" fill="white" stroke="red" stroke-width="5" />
+				<rect width="4" height="180" x="108" y="10" fill="red" />
+				<text x="100" y="210" style="font-size: 24pt; font-style: italic;">a</text>
+				<text x="115" y="125" style="font-size: 24pt; font-style: italic;">h</text>
+			</g>
+		</svg>
+		<div class="fields">
+			<div class="input">
+				<label class="base">Основание: <i>a = </i></label>
+				<!-- значение для основания фигуры -->
+				<input value="6" type="text" id="base">
+			</div>
+			<div class="input">
+				<label for="height">Высота: <i>h = </i></label>
+				<!-- значение для высоты фигуры -->
+				<input value="16" type="text" id="height">
+			</div>
+			<div class="input">
+				<label for="area"><i>S</i></label>
+				<!-- элемент для записи результата -->
+				<input value="" type="text" id="area">
+			</div>
+			<div class="input">
+				<button id="btn">Вычислить</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		var button = document.getElementById("btn");
+		
+		button.addEventListener('click', ()=>{ //для обновления площади по вводу в поле ввода
+			let input = document.getElementById('base').value;
+			let input2 = document.getElementById('height').value;
+			document.getElementById("area").value = 0.5 * input * input2;
+		})		
+	</script>
+</body>
+</html>
