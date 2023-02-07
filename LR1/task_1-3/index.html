@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center">Работа со строками</h1>
+    </header>
+
+    <h2>Японская поэзия</h2>
+
+    <pre>
+		<h3>
+		Нет стен у жизни,
+		Но что душа томится?
+		И мне тесно
+		С цветами рядом
+		В сумрачной росе.
+		</h3>
+	</pre>
+
+    <footer>
+        <h3 style="text-align:center"><a href="#" target="blank"></a></h3>
+    </footer>
+
+    <script>
+        // инициализация строки 1
+        let str1 = `Нет стен у жизни,
+            Но что душа томится?
+            И мне тесно
+            С цветами рядом
+            В сумрачной росе.`;
+
+        // инициализация строки 2
+        let str2 = "Нет стен у жизни,\n" +
+            "Но что душа томится?\n" +
+            "И мне тесно\n" +
+            "С цветами рядом\n" +
+            "В сумрачной росе.";
+
+        // инициализация строки 3
+        let str3 = "Нет стен у жизни,\nНо что душа томится?\nИ мне тесно\nС цветами рядом\nВ сумрачной росе.";
+
+        // визуальное отображение строк
+        console.log(str1);
+        console.log(str2);
+        console.log(str3);
+
+        // сравнение строк
+        console.log('str1 == str2', str1 == str2); // true   
+        console.log('str1 == str3', str1 == str3); // true   
+        console.log('str2 == str3', str2 == str3); // true
+    </script>
+
+</body>
+
+</html>
