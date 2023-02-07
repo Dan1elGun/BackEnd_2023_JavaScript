@@ -1,0 +1,61 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="data.js"></script>
+	<style>
+		* {
+			text-align: center;
+			font-size: 24px;
+		}
+		div {
+			margin: 0 auto;
+			width: 80%;
+		}
+		img {
+			width: 700px;
+		}
+		p {
+			font-weight: bold;
+		}
+		ul {
+			padding-left: 0;
+			list-style-position: inside;
+		}
+		li {
+			list-style-type: none;
+		}
+	</style>
+</head>
+
+<body>
+	<p id="title"></p>
+	<img id="image"></img>
+	<p id="year"></p>
+	<p id="country"></p>
+	<p id="hero"></p>
+	<p id="heroes"></p>
+	<script>
+		// ввод границ с проверкой
+		do
+			low = prompt('Нижняя граница (0-9)')
+		while (!(low !== '' && typeof Number(low) === 'number' && low < 10 && low > 0))
+		do
+			high = prompt('Верхняя граница (0-9)')
+		while (!(high !== '' && typeof Number(high) === 'number' && high >= low && high < 10))
+		
+		//случайное число от low до high
+		name = parseInt(Math.floor(Math.random() * (high - low + 1) + low))
+		document.getElementById("title").innerHTML = "Название: " + data[name].title //вывод
+		document.getElementById("image").src = "images/" + data[name].img
+		document.getElementById("year").innerHTML = "Год выпуска: " + data[name].year
+		document.getElementById("country").innerHTML = "Страна: " + data[name].country
+		if(data[name].title != "") {
+			document.getElementById("hero").innerHTML = "Актёры:"
+			document.getElementById("heroes").innerHTML = data[name].heroes
+		}
+	</script>	
+
+</body>
+</html>
