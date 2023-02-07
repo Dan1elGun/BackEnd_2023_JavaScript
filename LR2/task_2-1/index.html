@@ -1,0 +1,54 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="data.js"></script>
+	<style>
+		* {
+			text-align: center;
+			font-size: 24px;
+		}
+		div {
+			margin: 0 auto;
+			width: 80%;
+		}
+		img {
+			width: 700px;
+		}
+		p {
+			font-weight: bold;
+		}
+		ul {
+			padding-left: 0;
+			list-style-position: inside;
+		}
+		li {
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<p id="title"></p>
+	<img id="image"></img>
+	<p id="year"></p>
+	<p id="country"></p>
+	<p id="hero"></p>
+	<p id="heroes"></p>
+	<script>
+
+			const namebin = prompt('Пожалуйста, укажите номер тизера');
+			name = parseInt(namebin, 2)
+			document.getElementById("title").innerHTML = "Название: " + data[name].title
+			document.getElementById("image").src = "images/img" + data[name].img + ".jpg"
+			document.getElementById("year").innerHTML = "Год выпуска: " + data[name].year
+			document.getElementById("country").innerHTML = "Страна: " + data[name].country
+			if(data[name].title != "") {
+				document.getElementById("hero").innerHTML = "Актёры:"
+				document.getElementById("heroes").innerHTML = data[name].heroes
+			}
+			
+	</script>
+
+</body>
+</html>
