@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Программирование в среде JavaScript</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center">Работа со строками</h1>
+    </header>
+
+    <footer>
+        <h3 style="text-align:center">
+            <a href="#" target="blank"></a>
+        </h3>
+    </footer>
+    <script src="teams.js"></script>
+    <script>
+        fteams = teams.slice(1,teams.length-1)  //убрать переходы на новую строку в начале и конце
+        let arr = fteams.split('\n')            //сборка массива из групп
+        scorpions = arr[4].split(';')           //сборка массива из определённой группы (разделить по ;)
+
+        console.log(arr[4])
+        console.log(scorpions) //тестовые выводы
+
+        console.log(`name = ${scorpions[1]}`)   //основные выводы
+        console.log(`alias = ${scorpions[2]}`)
+        console.log(`country = ${scorpions[3]}`)
+        console.log(`year = ${scorpions[4]}`)
+        console.log(`style = ${scorpions[5]}`)
+        console.log(`image = ${scorpions[6]}`)
+    </script>
+
+</body>
+
+</html>
