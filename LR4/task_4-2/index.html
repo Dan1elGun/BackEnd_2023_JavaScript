@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<p id="input"></p>
+	<p id="date"></p>
+	<p id="day"></p>
+	<p id="month"></p>
+	<p id="year"></p>
+	
+	<script>
+
+		const dat = prompt('Введите дату рождения:');
+		let msec = Date.parse(dat); //миллисекунды от 01.01.1970 до введённой даты
+		let d = new Date(msec); //создание даты в удобном для js виде
+		//массивы для вывода информации
+		let days = ["Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"];
+		let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь","Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+		document.getElementById("input").innerHTML = "Вы ввели следующую дату: " + dat
+		document.getElementById("date").innerHTML = "Число: " + d.getDate()
+		document.getElementById("day").innerHTML = "День: " + days[d.getDay()]
+		document.getElementById("month").innerHTML = "Месяц: " + months[d.getMonth()]
+		document.getElementById("year").innerHTML = "Год: " + d.getFullYear()
+	
+		</script>	
+</body>
+</html>
