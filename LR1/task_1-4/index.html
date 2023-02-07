@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Программирование в среде JavaScript</title>
+    <script src="orders.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center">Работа со строками</h1>
+    </header>
+
+    <h2>Оформление заказа</h2>
+
+    <footer>
+        <h3 style="text-align:center">
+            <a href="#" target="blank"></a>
+        </h3>
+    </footer>
+
+    <script>
+        // разбиваем строку заказа в массив
+        let order = str_order.split(", ");
+
+        // формируем строку для вывода 
+        // в строку подставляем значения массива
+        let str =
+            "<span>Идентификатор товара:</span> <b>${order[0]}</b><br/>" +
+            "<span>Название:</span> <b>${order[1]}</b><br/>" +
+            "<span>Бренд:</span> <b>${order[2]}</b><br/>" +
+            "<span>Цвет:</span> <b>${order[3]}</b><br/>" +
+            "<span>Страна:</span> <b>${order[4]}</b><br/>" +
+            "<span>Капюшон:</span> <b>${order[5]}</b><br/>" +
+            "<span>Размер:</span> <b>${order[6]}</b><br/>" +
+            "<span>Цена:</span> <b>${order[7]}</b><p>" +
+            "<img src=\"${order[8]}\" width=\"250\">";
+
+        // выводим данные о заказе
+        document.write(str);
+    </script>
+
+</body>
+
+</html>
