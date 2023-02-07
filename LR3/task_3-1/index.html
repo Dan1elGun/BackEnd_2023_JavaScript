@@ -1,0 +1,75 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.wrapper {
+			width: 60%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.input {
+			font-size: 20pt;
+			clear: both;
+			text-align: right;
+			padding: 10px;
+		}
+		.input input { font-size: 16pt; text-align: center; width: 50% }
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align:center">Объект Math</h1>
+	</header>
+	
+	<div class="wrapper">
+		<br>
+		<svg>
+			<g>
+				<circle cx="50%" cy="50%" r="49%" fill="white" stroke="red" stroke-width="5" />
+				<line x1="50%" x2="99%" y1="50%" y2="50%" stroke="red" stroke-width="5" />
+			</g>
+		</svg>
+		<br>
+
+		<div class="fields">
+			<div class="input">
+				<label for="rad">Радиус, <i>R</i>:</label>
+				<input type="text" id="rad" disabled>
+			</div>
+			<div class="input">
+				<label for="area">Площадь, <i>S</i>:</label>
+				<input type="text" id="area" disabled>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// получим ссылку на элемент
+		let svg = document.querySelector("svg");		
+
+		// получаем случайное значение радиуса
+		let r = Math.ceil(Math.random() * 10);
+
+		// диаметр
+		let d = r * 2;
+
+		svg.style.width = d + "cm";
+		svg.style.height = d + "cm";
+
+		// ...
+		document.getElementById("rad").value = r
+		document.getElementById("area").value = Math.floor(Math.PI * Math.pow(r, 2))
+		
+
+	</script>
+
+	<footer>
+		
+	</footer>	
+</body>
+</html>
