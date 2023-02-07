@@ -1,0 +1,38 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+	
+<body>
+	<header>
+		<h1>CHECK CONSOLE</h1>
+	</header>
+
+	<script>
+
+		a = prompt('Введите коэффициент а'); //ввод
+		b = prompt('Введите коэффициент b');
+		c = prompt('Введите коэффициент c');
+
+		d = Math.pow(b,2) - 4 * a * c
+		console.log("Дискриминант: " + d) //поиск дискриминанта и вывод
+
+		if(d > 0) { //проверка на количество корней
+			console.log("x1 = " + (-b + Math.sqrt(d)) / (2 * a))
+			console.log("x2 = " + (-b - Math.sqrt(d)) / (2 * a))
+		} else if (d == 0) {
+			console.log("x = " + (-b + Math.sqrt(d)) / (2 * a))
+		} else {
+			console.log("НЕТ КОРНЕЙ")
+		}
+		
+
+	</script>
+
+	<footer>
+		
+	</footer>		
+</body>
+</html>
