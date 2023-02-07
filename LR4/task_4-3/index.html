@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align:center">Объект Date</h1>
+	</header>
+
+	<!-- контейнер для вставки числа -->
+	<h2>До нового года осталось: <span id="days"><!-- --></span> дней!</h2>
+	
+	<footer>
+		
+	</footer>	
+	
+	<script>
+		let now = new Date();
+		let nyear = new Date(now.getFullYear()+1, 0);
+		// вычисляем разность в миллисекундах
+		let dif = nyear.getTime() - now.getTime();
+		// всего дней
+		let c = Math.floor(dif/ (1000 * 60 * 60 * 24)) 
+		document.getElementById("days").innerHTML = c
+
+	</script>
+
+</body>
+</html>
