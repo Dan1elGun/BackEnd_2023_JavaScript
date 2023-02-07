@@ -1,0 +1,51 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align:center;">Работа со строками</h1>
+	</header>
+	
+	<pre>
+	<h3>
+		Сомнений нет, неясной нет печали,
+		Всё высказать во сне умею я,
+		И мчит да мчит всё далее и далее
+		С тобою нас воздушная ладья.
+	</h3>
+	</pre>
+
+	<footer>
+		<h3 style="text-align:center;"><a href="www.bgitu.ru" target="blank"></a></h3>
+	</footer>		
+
+	<script>
+		var str = `
+			Сомнений нет, неясной нет печали,
+			Всё высказать во сне умею я,
+			И мчит да мчит всё далее и далее
+			С тобою нас воздушная ладья.`;
+
+		//поиск по умолчанию
+		console.log(str.indexOf("мчит")); // 75
+		console.log(str.lastIndexOf("мчит")); // 83 
+		/*
+			поиск начинается с позиции - 80 и до конца строки
+			отсчет ведется с позиции - 0
+			найдена позиция вхождения второго слова 'мчит' 
+		*/
+		console.log(str.indexOf("мчит", 80)); // 83
+		/*
+			поиск начинается с позиции - 0 до позиции - 80
+			отсчет ведется с позиции - 0
+			найдена позиция вхождения первого слова 'мчит' 
+		*/
+		console.log(str.lastIndexOf("мчит", 80)); // 75
+	</script>
+
+</body>
+</html>
