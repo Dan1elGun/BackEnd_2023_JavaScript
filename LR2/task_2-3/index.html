@@ -1,0 +1,52 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+	div {
+		background-color: #87CEEB;
+		margin: 0 auto;
+		padding: 20px;
+		font-size: 14pt;
+		font-family: Arial;
+	}
+	</style>
+
+	<div style="width:100px;">
+	Был человек – и нет его! Так-то вот и все на сем свете! сегодня ты и сыт и пьян, живешь в свое удовольствие, трубочку покуриваешь… А завтра – где ты, человек?
+	</div>
+
+	<script>
+		// задаю ширину блока в двоичном виде
+		let bin = 0b111110100; // 500
+
+		// преобразую двоичное число в десятичное
+		// хочу получить - 500
+		num = parseInt(bin , 10); //перенести bin в скобку, и указать систему счисления
+
+		// выполняю конкатенацию строк
+		// хочу получить - 500px
+		width = num.toString() + "px";
+
+		// выбираю блок div
+		let div = document.querySelector('div');
+		
+		// устанавливаю ширину блока
+		div.style.width = width;
+
+		// найдите, что я делаю не так...
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 style="text-align:center">Работа с числами</h1>
+	</header>
+
+	<footer>
+		
+	</footer>		
+</body>
+</html>
